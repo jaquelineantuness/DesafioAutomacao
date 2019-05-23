@@ -27,7 +27,7 @@ Para a criar o layout em http, foi instalado HTML Report.
 
       npm install -g newman-report-htmlextra
       
-Além do resultado do exibido no Prompt (Imagem 3) é possível visualiza-lo em [HTML](https://github.com/jaquelineantuness/DesafioAutomacao/tree/master/DesafioSensedia/newman), como nas imagens abaixo.
+Além do resultado do exibido no Prompt (Imagem 3) é possível visualiza-lo em [HTML](https://github.com/jaquelineantuness/DesafioAutomacao/tree/master/DesafioSensedia/newman).
 
    ![home_report_2](https://user-images.githubusercontent.com/25389211/58244022-2a19ab80-7d28-11e9-86dd-5ae88f531c07.png)
 ![total_request_report](https://user-images.githubusercontent.com/25389211/58244235-98f70480-7d28-11e9-83f3-dcbe4fecf68c.png)
