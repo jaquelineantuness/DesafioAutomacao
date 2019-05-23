@@ -17,9 +17,9 @@
 OBS: Devido à descontinuação da permissão publish_actions, não é mais possível usar a API para publicar publicações de usuário e/ou atualiza-las. Os testes foram desenvolvidos, se baseando na continuidade da permissão, e em erros de autenticação.
 
 ### **Testes**
-  Foi criado uma Collection no Postman, contendo as validações dos cenários de teste e a utilização de Envaronmets, para o armazenamento de variáveis.
+  Foi criada uma Collection no Postman, contendo as validações dos cenários de teste e a utilização de Envaronmets, para o armazenamento de variáveis.
   
-  Para a execução dos testes, foi utilizado o Newman, além de ser uma forma rápida de execução, é possível roda-lo em ambientes de CI/CD. 
+  Para a execução dos testes, foi utilizado o Newman, além de ser uma forma rápida de execução, é possível integrar com ambientes de CI/CD. 
   
       newman run "Desafio APIs Facebook.postman_collection.json" -e Facebook.postman_environment.json --reporters=cli,htmlextra
 
