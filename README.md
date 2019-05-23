@@ -24,4 +24,9 @@ OBS: Devido à descontinuação da permissão publish_actions, não é mais poss
 
 Relatórios
 
+
+![home_report_2](https://user-images.githubusercontent.com/25389211/58244022-2a19ab80-7d28-11e9-86dd-5ae88f531c07.png)
+![total_request_report](https://user-images.githubusercontent.com/25389211/58244235-98f70480-7d28-11e9-83f3-dcbe4fecf68c.png)
+![newman_report](https://user-images.githubusercontent.com/25389211/58244241-9b595e80-7d28-11e9-9b77-1e73a7e87b90.png)
+
     
