@@ -1,0 +1,67 @@
+		 
+		 
+		Cenario 1: Autenticacao realizada sem Token
+			Dado que o usuário possua token de acesso.
+			Quando o usuario acessar "https://graph.facebook.com/me"
+			E enviar uma requisicao do tipo GET, sem o token de acesso.
+			Entao deve retornar o status 400.
+			E exibir a mensagem "An active access token must be used to query information about the current user.", em seu response.
+		
+		Cenario 2: Autenticação com token inválido
+			Dado que o usuário possua token de acesso.
+			Quando o usuario acessar "https://graph.facebook.com/me?access_token={{tokenInvalido}}"
+			E enviar uma requisicao do tipo GET, com o token de acesso inválido.
+			Entao deve retornar o status 400.
+			E exibir a mensagem "Invalid OAuth access token.", em seu response.
+		
+		Cenario 3: Autenticação com token valido
+			Dado que o usuário possua token de acesso.
+			Quando o usuario acessar "https://graph.facebook.com/me?access_token={{token}}"
+			E enviar uma requisicao do tipo GET, com o token de acesso válido.
+			Entao deve retornar o status 200.
+			E deve retornar os dados "name":"Test User Sensedia"
+			E "id":"102203477696180".
+			
+		Cenario 4: Realizar Postagem sem Token
+			Dado que o usuário possua token de acesso.
+			Quando o usuario acessar "https://graph.facebook.com/me/feed".
+			E enviar uma requisicao do tipo POST, com a mensagem "Teste post" sem o token de acesso.
+			Entao deve retornar o status 400.
+			E exibir a mensagem "An active access token must be used to query information about the current user.", em seu response.
+		
+		Cenario 5: Realizar Postagem  com token inválido
+			Dado que o usuário possua token de acesso.
+			Quando o usuario acessar "https://graph.facebook.com/me/feed?access_token={{tokenInvalido}}".
+			E enviar uma requisicao do tipo POST, com a mensagem "Teste post" com o token de acesso inválido.
+			Entao deve retornar o status 400.
+			E exibir a mensagem "Invalid OAuth access token.", em seu response.
+		
+		Cenario 5: Realizar Postagem  com sucesso
+			Dado que o usuário possua token de acesso.
+			Quando o usuario acessar "https://graph.facebook.com/me/feed?access_token={{token}}".
+			E enviar uma requisicao do tipo POST, com a mensagem "Teste post" com o token de acesso válido.
+			Entao deve retornar o status 200.
+		
+		Cenario 6: Alterar Postagem com Token Inválido
+			Dado que o usuário possua token de acesso.
+			E que tenha uma publicação em seu Feed.
+			Quando o usuario acessar "https://graph.facebook.com?access_token={{tokenInvalido}}".
+			E enviar uma requisicao do tipo POST, com a mensagem "Teste post Alterado" para o id da publicação com o token de acesso inválido.
+			Entao deve retornar o status 400.
+			E exibir a mensagem "Invalid OAuth access token.", em seu response.
+		
+		Cenario 6: Alterar Postagem com ID inválido
+			Dado que o usuário possua token de acesso.
+			E que tenha uma publicação em seu Feed.
+			Quando o usuario acessar "https://graph.facebook.com?access_token={{token}}".
+			E enviar uma requisicao do tipo POST, com a mensagem "Teste post Alterado" para o id da publicação inválido, com o token de acesso válido.
+			Entao deve retornar o status 404.
+	
+		Cenario 7: Alterar Postagem com Sucesso
+			Dado que o usuário possua token de acesso.
+			E que tenha uma publicação em seu Feed.
+			Quando o usuario acessar "https://graph.facebook.com?access_token={{token}}".
+			E enviar uma requisicao do tipo POST, com a mensagem "Teste post Alterado" para o id da publicação com o token de acesso válido.
+			Entao deve retornar o status 200.
+
+		
