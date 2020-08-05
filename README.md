@@ -1,4 +1,4 @@
-# Desafio de Automação Sensedia
+# Desafio em Automação de APIs
 
   Desafio utilizando as APIs do Facebook, foi desenvolvido conforme os seguintes pontos:
   
